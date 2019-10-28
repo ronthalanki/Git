@@ -13,7 +13,7 @@ default_args = {
     'retry_delay': timedelta(minutes=1)
 }
 
-dag = DAG('github', default_args=default_args, schedule_interval=timedelta(minutes=1))
+dag = DAG('github', default_args=default_args, schedule_interval=timedelta(days=1))
 
 run_script = "/Users/sthalanki/dev/Git/github.sh "
 task = BashOperator(
